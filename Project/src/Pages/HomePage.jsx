@@ -5,10 +5,12 @@ function HomePage() {
         <>
             <Header />
             <div>
-                <div className='wrapper'>HomePage</div>
-
+                
                 <div>
-                    <h1>Welcome to Quiz-Managment</h1>
+                    <h1 className="flex text-3xl justify-center font-bold mt-12 italic">Hello New Customer👋👋👋
+                     and Welcome to Website. We will be here for your prepration. This website will help
+                     you to pass your tests.
+                    </h1>
                     
                 </div>    
               
