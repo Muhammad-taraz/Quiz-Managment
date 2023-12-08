@@ -3,7 +3,7 @@ import HomePage from "../Pages/HomePage"
 import Signup from "../Pages/Signup"
 import Login from "../Pages/Login"
 import LandingPage from "../Pages/Landing-Page"
-
+import Quiz from "../Pages/Quiz"
 
 const router = createBrowserRouter ([
     {
@@ -25,6 +25,10 @@ const router = createBrowserRouter ([
     {
         path: "/LandingPage",
         element:<LandingPage/>
+    },
+    {
+        path: "/Quiz",
+        element:<Quiz/>
     },
     
     
