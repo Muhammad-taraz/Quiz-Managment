@@ -7,8 +7,11 @@ function HomePage() {
             <div>
                 
                 <div>
-                    <h1 className="flex text-3xl justify-center font-bold mt-12 italic">Hello New Customer👋👋👋
-                     and Welcome to Website. We will be here for your prepration. This website will help
+                    <h1 className="flex text-3xl justify-center font-bold mt-12 italic">
+                     Hello New Customer👋👋👋 <br/>
+                     and Welcome to Website. <br/>
+                    We will be here for your prepration.<br/>
+                     This website will help
                      you to pass your tests.
                     </h1>
                     
