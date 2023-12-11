@@ -8,7 +8,7 @@ function LandingPage () {
  const [count, setCount] = useState(0)
   return (
     <React.Fragment>
-    <div className="container4 text-white h-[100vh]">
+    <div className="container4 text-white h-[100vh] xl:[100vh] lg:h-[100vh] md:h-[100vh] sm:h-[100vh]">
         <div>
          <h1 className='wrapper flex font-bold text-center text-7xl italic underline'>
          Welcome to Quiz Managment
