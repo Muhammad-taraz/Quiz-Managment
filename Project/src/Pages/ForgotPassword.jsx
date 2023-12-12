@@ -8,6 +8,7 @@ const ForgotPassword = ()=>{
     }
     return <React.Fragment>
         
+        <h1 className='flex font-bold justify-center mt-5 text-5xl italic underline'>ForgotPassword</h1>
        <form className="flex flex-col my-10 bg-slate-300 p-10" onSubmit={submitHandler}>
             <input type="email" placeholder="email" className="p-2 my-1 border-[2px]" value={email} onChange={(e)=>setEmail(e.target.value)} />
                 <button className="mt-5 p-2 rounded-lg w-fit text-black bg-green-400 hover:bg-green-900" type="submit">
