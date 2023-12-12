@@ -9,6 +9,7 @@ import MathsQuestions from "../Pages/MathsQuestions"
 import GKQuestions from "../Pages/GKQuestions"
 import CompQuestions from "../Pages/CompQuestions"
 import IslamiatQuestions from "../Pages/IslamiatQuestions"
+import ForgotPassword from "../Pages/ForgotPassword"
 
 const router = createBrowserRouter ([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter ([
     {
         path: "/Login",
         element:<Login/>
+    },
+    {
+        path: "/ForgotPassword",
+        element:<ForgotPassword/>
     },
     {
         path: "/LandingPage",
