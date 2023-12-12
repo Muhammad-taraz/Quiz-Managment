@@ -4,13 +4,7 @@ import Signup from "../Pages/Signup"
 import Login from "../Pages/Login"
 import LandingPage from "../Pages/Landing-Page"
 import Quiz from "../Pages/Quiz"
-import EngQuestions from "../Pages/EngQuestions"
-import MathsQuestions from "../Pages/MathsQuestions"
-import GKQuestions from "../Pages/GKQuestions"
-import CompQuestions from "../Pages/CompQuestions"
-import IslamiatQuestions from "../Pages/IslamiatQuestions"
 import ForgotPassword from "../Pages/ForgotPassword"
-
 const router = createBrowserRouter ([
     {
         path: "/",
@@ -40,26 +34,7 @@ const router = createBrowserRouter ([
         path: "/Quiz",
         element:<Quiz/>
     },
-    {
-        path: "/EngQuestions",
-        element:<EngQuestions/>
-    },
-    {
-        path: "/MathsQuestions",
-        element:<MathsQuestions/>
-    },
-    {
-        path: "/IslamiatQuestions",
-        element:<IslamiatQuestions/>
-    },
-    {
-        path: "/GKQuestions",
-        element:<GKQuestions/>
-    },
-    {
-        path: "/CompQuestions",
-        element:<CompQuestions/>
-    },
+   
     
     
 ])
