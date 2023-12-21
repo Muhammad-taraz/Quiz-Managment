@@ -7,6 +7,7 @@ import Login from "../Pages/Login"
 import LandingPage from "../Pages/Landing-Page"
 import Quiz from "../Pages/Quiz"
 import ForgotPassword from "../Pages/ForgotPassword"
+import Result from '../Pages/Result';
 
 
 export default function Router() {
@@ -21,6 +22,7 @@ export default function Router() {
         <Route path="/ForgotPassword" element={<ForgotPassword/>} />
         <Route path="/LandingPage" element={<LandingPage/>} />
         <Route path="/Quiz" element={<Quiz/>} />
+        <Route path="/Result" element={<Result/>} />
 
       </Routes>
     

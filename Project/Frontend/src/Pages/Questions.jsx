@@ -1,34 +1,66 @@
 import React, { useEffect, useState } from 'react'
 import data from './data'
-
+import { useNavigate } from 'react-router-dom'
+ 
 export default function Questions() {
 
-   const [checked, setChecked] = useState(undefined)
+   const [currentIndex, setCurrentIndex] = useState(0);
 
-   useEffect(() => {
-    console.log("question")
-   })
+   const navigate = useNavigate()
 
   function onSelect() {
-    setChecked(true)  
+  
     console.log("radio button change")
   }
-  return (
-    <div>
-      <h5 className="flex font-bold justify-center mt-5 text-5xl italic underline">{question.question}</h5>
 
-      <ul key={question.id}>
+  const onPrev = () => {
+    if(currentIndex >= 1) {
+      setCurrentIndex((prev) => prev-1)
+    }
+    else{
+      alert("Wrong Click");
+    }
+  }
+
+   const onNext = () => {
+      if(currentIndex >= data.length-1){
+        navigate("/result")
+        return;
+      }
+      setCurrentIndex((prev) => prev+1)
+   }
+
+  return (
+    <>
+       <h4 className='flex font-bold justify-center mt-5 text-5xl italic underline'>Simple Questions</h4>
+
+    <div className='flex flex-col items-center mt-[8rem]'>
+      <h5 className="flex font-bold justify-center mt-5 text-5xl italic underline">{data[currentIndex].question}</h5>
+
+      <ul>
        {
-        question.options.map((q, i) => (
+        data[currentIndex].options.map((q, i) => (
           <li key={i}>
-          <input type='radio' value={checked} name='options' 
-          id={`q${i}-options`} onChange={onSelect()} />
+          <input type='radio' name='options' 
+          id={`q${i}-options`} onChange={() => onSelect()} />
           <label htmlFor={`q${i}-options`} className="flex font-semibold italic text-lg">{q}</label>
           <div className='checked flex border-[2px]'></div>
         </li>
         ))
        }
       </ul>
+
+     <div className='flex gap-[12rem] mt-12'>
+       <button 
+        className='prev mt-2 p-2 rounded-lg text-black bg-green-400 hover:bg-green-900'
+        onClick={onPrev}>Previous</button>
+        
+        <button 
+        className='next mt-2 p-2 rounded-lg text-black bg-green-400 hover:bg-green-900'
+        onClick={onNext}>Next</button>
+        </div>
+
     </div>
+    </>
   )
 }

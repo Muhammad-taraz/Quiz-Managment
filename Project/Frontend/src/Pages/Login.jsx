@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Header from "../Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LandingPage from "./Landing-Page";
 import Quiz from "./Quiz";
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   // const [email,setEmail] =  useState("")
   // const [password,setPassword] =  useState("")
 
@@ -19,6 +22,7 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    navigate("/LandingPage")
   };
   return (
     <React.Fragment>
@@ -35,7 +39,7 @@ const Login = () => {
             Email
           </label>
 
-          <input
+          <input required
             type="email"
             placeholder="email"
             name="email"
@@ -51,7 +55,7 @@ const Login = () => {
             Password
           </label>
 
-          <input
+          <input required
             type="password"
             placeholder="password"
             name="password"
@@ -60,14 +64,14 @@ const Login = () => {
             onChange={handleValue}
           />
 
-          <Link
+          <button
             className="flex font-semibold justify-center text-lg italic mt-12 h-11 w-28 
              p-2 bg-green-400 rounded-md hover:bg-green-900 border-black"
             type="submit"
             to={"/LandingPage"}
           >
             Login{" "}
-          </Link>
+          </button>
           <div className="flex justify-between mt-12 w-[100%]">
             <Link
               className="flex font-semibold mt-3 italic cursor-pointer p-3 text-lg"
