@@ -50,7 +50,7 @@ const ForgotPassword = () => {
           <div className="flex justify-between mt-12 w-[100%]">
             <Link
               className="flex font-semibold mt-3 italic cursor-pointer p-3 text-lg"
-              to={"/Sgnup"}
+              to={"/Signup"}
             >
               Sign Up
             </Link>

@@ -34,17 +34,17 @@ export default function Questions() {
     <>
        <h4 className='flex font-bold justify-center mt-5 text-5xl italic underline'>Simple Questions</h4>
 
-    <div className='flex flex-col items-center mt-[8rem]'>
-      <h5 className="flex font-bold justify-center mt-5 text-5xl italic underline">{data[currentIndex].question}</h5>
+    <div className='flex flex-col ml-12 mt-[5rem]'>
+      <h5 className="flex font-semibold mt-5 text-2xl italic underline">{data[currentIndex].question}
+      </h5>
 
       <ul>
        {
         data[currentIndex].options.map((q, i) => (
-          <li key={i}>
-          <input type='radio' name='options' 
+          <li className='mt-2 flex' key={i}>
+          <input type='radio' name='options'
           id={`q${i}-options`} onChange={() => onSelect()} />
-          <label htmlFor={`q${i}-options`} className="flex font-semibold italic text-lg">{q}</label>
-          <div className='checked flex border-[2px]'></div>
+          <label htmlFor={`q${i}-options`} className="flex font-semibold italic text-lg ml-2">{q}</label>
         </li>
         ))
        }
