@@ -38,14 +38,14 @@ const ForgotPassword = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <Link
+          <button
             className="flex font-semibold justify-center text-lg italic mt-12 h-11 w-[10rem] p-2
               bg-green-400 rounded-md hover:bg-green-900 border-black"
             type="submit"
             to={"/LandingPage"}
           >
             Reset password{" "}
-          </Link>
+          </button>
 
           <div className="flex justify-between mt-12 w-[100%]">
             <Link
