@@ -35,7 +35,7 @@ export default function Questions() {
        <h4 className='flex font-bold justify-center mt-5 text-5xl italic underline'>Simple Questions</h4>
 
     <div className='flex flex-col ml-12 mt-[5rem]'>
-      <h5 className="flex font-semibold mt-5 text-2xl italic underline">{data[currentIndex].question}
+      <h5 className="flex font-semibold mt-5 text-2xl italic">{data[currentIndex].question}
       </h5>
 
       <ul>

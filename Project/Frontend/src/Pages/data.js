@@ -1,7 +1,7 @@
 export default [
     {
         id: 1,
-        question : "What is the capital of France",
+        question : "1. What is the capital of France?",
         options : [
             'Rome',
             'Paris',
@@ -10,7 +10,7 @@ export default [
     },
     {
         id: 2,
-        question : "What is the square root of 144",
+        question : "2. What is the square root of 144?",
         options : [
             '12',
             '10',
@@ -19,7 +19,7 @@ export default [
     },
     {
         id: 3,
-        question : "What is the largest planet in our solar system",
+        question : "3. What is the largest planet in our solar system?",
         options : [
             'Earth',
             'Mars',
@@ -28,7 +28,7 @@ export default [
     },
     {
         id: 4,
-        question : "In which year did world war ll end",
+        question : "4. In which year did world war ll end?",
         options : [
             '1943',
             '1950',
@@ -37,7 +37,7 @@ export default [
     },
     {
         id: 5,
-        question : "What is the capital of Japan",
+        question : "5. What is the capital of Japan?",
         options : [
             'Beijing',
             'Seoul',
@@ -46,7 +46,7 @@ export default [
     },
     {
         id: 6,
-        question : "How many continents are there in the world",
+        question : "6. How many continents are there in the world?",
         options : [
             '5',
             '7',
@@ -55,7 +55,7 @@ export default [
     },
     {
         id: 7,
-        question : "Who discovered penicillin",
+        question : "7. Who discovered penicillin?",
         options : [
             'Alexander Fleming ',
             'Marie curie',
@@ -64,7 +64,7 @@ export default [
     },
     {
         id: 8,
-        question : "What is the chemical symbol for gold",
+        question : "8. What is the chemical symbol for gold?",
         options : [
             'Gd',
             'Au',
@@ -73,7 +73,7 @@ export default [
     },
     {
         id: 9,
-        question : "How many sides does a Hexagon have",
+        question : "9. How many sides does a Hexagon have?",
         options : [
             '6',
             '7',
@@ -82,7 +82,7 @@ export default [
     },
     {
         id: 10,
-        question : "Which planet is known as the Red Planet",
+        question : "10. Which planet is known as the Red Planet?",
         options : [
             'Mars',
             'Venus',
@@ -91,7 +91,7 @@ export default [
     },
     {
         id: 11,
-        question : "what is the capital of Australia",
+        question : "11. what is the capital of Australia?",
         options : [
             'Canberra',
             'Sydney',
@@ -100,7 +100,7 @@ export default [
     },  
     {
         id: 12,
-        question : "Who developed the theory of relativity",
+        question : "12. Who developed the theory of relativity?",
         options : [
             'Issac Newton',
             'Stephen Hawking',
@@ -109,7 +109,7 @@ export default [
     },  
     {
         id: 13,
-        question : "What is the powerhouse of the cell",
+        question : "13. What is the powerhouse of the cell?",
         options : [
             'Nucleus',
             'Ribosome',
@@ -118,7 +118,7 @@ export default [
     },  
     {
         id: 14,
-        question : "What is the square of 9",
+        question : "14. What is the square of 9?",
         options : [
             '72',
             '81',
@@ -127,7 +127,7 @@ export default [
     },  
     {
         id: 15,
-        question : "What is the chemical symbol for water",
+        question : "15. What is the chemical symbol for water?",
         options : [
             'HO',
             'HO2',
@@ -136,7 +136,7 @@ export default [
     },  
     {
         id: 16,
-        question : "Who is known as the FATHER OF COMPUTERS",
+        question : "16. Who is known as the FATHER OF COMPUTERS?",
         options : [
             'Alan Turing',
             'Charles Babbage',
@@ -145,7 +145,7 @@ export default [
     },  
     {
         id: 17,
-        question : "What is the next number in the sequence  2,6,12,20_____",
+        question : "17. What is the next number in the sequence  2,6,12,20_____ ?",
         options : [
             '24',
             '30',
@@ -154,7 +154,7 @@ export default [
     }, 
     {
         id: 18,
-        question : "Which word doesnot belong in the following group  Apple,Banana,Orange,Grape",
+        question : "18. Which word doesnot belong in the following group  Apple,Banana,Orange,Grape?",
         options : [
             'Pear',
             'Apple',
@@ -163,7 +163,7 @@ export default [
     }, 
     {
         id: 19,
-        question : "Thickest layer of Earth",
+        question : "19. Thickest layer of Earth?",
         options : [
             'Mantle',
             'Subtle',
@@ -172,7 +172,7 @@ export default [
     }, 
     {
         id: 20,
-        question : "Income tax rate is 10% if tax deducted is 1500 what will be the income",
+        question : "20. Income tax rate is 10% if tax deducted is 1500 what will be the income?",
         options : [
             '150,000',
             '15000',
