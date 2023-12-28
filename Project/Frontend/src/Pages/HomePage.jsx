@@ -4,15 +4,16 @@ function HomePage() {
     return (
         <>
             <Header />
-            <div>
+            <div className="flex justify-center items-center">
                 
-                <div>
-                    <h1 className="flex text-3xl justify-center font-bold mt-12 italic">
-                     Hello New Customer👋👋👋 <br/>
+                <div className="border-[5px]  rounded-lg border-gray-400 mt-16 w-[35rem] p-12">
+                    <h1 className="flex text-3xl justify-center items-center font-bold italic">
+                     Hello New User👋👋👋 <br/>
                      and Welcome to Website. <br/>
                     We will be here for your prepration.<br/>
                      This website will help
                      you to pass your tests.
+                
                     </h1>
                     
                 </div>    

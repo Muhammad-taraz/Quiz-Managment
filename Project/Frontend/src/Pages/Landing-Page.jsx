@@ -1,15 +1,20 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import viteLogo from "/vite.svg";
 import "../App.css";
+import { Helmet } from "react-helmet"
 
 function LandingPage() {
   const [count, setCount] = useState(0);
 
   return (
     <React.Fragment>
-      <div className="bg-cover bg-no-repeat text-white" style = {{backgroundImage : 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVkwMCmIaKpuuUWhJBWebMvyflP70Inw8bUA&usqp=CAU")'}}>
+      <Helmet className="bg-cover bg-no-repeat w-full">
+        <style>
+          {"body{background-image: url('https://wallpapers.com/images/hd/fantasy-planets-in-space-eadjr5zrwm5n88mo.jpg')}"}
+        </style>
+      </Helmet>
+      <div className="bg-cover bg-no-repeat text-black">
         <h1 className="wrapper flex font-bold text-center text-7xl italic underline">
           Welcome to Quiz Management
         </h1>

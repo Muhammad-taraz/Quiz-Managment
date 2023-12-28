@@ -23,6 +23,7 @@ const Login = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     navigate("/LandingPage")
+
   };
   return (
     <React.Fragment>
