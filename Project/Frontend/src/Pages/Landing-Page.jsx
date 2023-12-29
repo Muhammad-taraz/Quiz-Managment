@@ -7,14 +7,23 @@ import { Helmet } from "react-helmet"
 function LandingPage() {
   const [count, setCount] = useState(0);
 
+  const backgroundStyle = {
+    backgroundImage: 'url(https://getwallpapers.com/wallpaper/full/e/4/6/936332-beautiful-full-hd-1080p-desktop-backgrounds-1920x1080-photos.jpg)',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+
   return (
     <React.Fragment>
-      <Helmet className="bg-cover bg-no-repeat w-full">
+
+      {/* <Helmet className="bg-cover bg-no-repeat w-full">
         <style>
-          {"body{background-image: url('https://wallpapers.com/images/hd/fantasy-planets-in-space-eadjr5zrwm5n88mo.jpg')}"}
+          {"body{background-image: url('https://getwallpapers.com/wallpaper/full/e/4/6/936332-beautiful-full-hd-1080p-desktop-backgrounds-1920x1080-photos.jpg')}"}
         </style>
-      </Helmet>
-      <div className="bg-cover bg-no-repeat text-black">
+      </Helmet> */}
+
+      
+      <div className="bg-cover bg-no-repeat text-black" style={backgroundStyle}>
         <h1 className="wrapper flex font-bold text-center text-7xl italic underline">
           Welcome to Quiz Management
         </h1>

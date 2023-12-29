@@ -10,7 +10,7 @@ const app = express();
 const PORT = 5924;
 
 // Connect to MongoDB
-connectDatabase().then(e=>console.log("connected ss")).catch((e)=>console.log(e))
+connectDatabase().then(e => console.log("connected successfully")).catch((e)=>console.log(e))
   
   async function connectDatabase(){
   await mongoose.connect("mongodb+srv://taraz:taraz12@todos.g2clqpo.mongodb.net/test?retryWrites=true&w=majority")}

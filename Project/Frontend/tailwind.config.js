@@ -8,10 +8,4 @@ export default {
     extend: {},
   },
   plugins: [],
-
-  theme: {
-    extend: {},
-  },
-  plugins: [],
 }
-
