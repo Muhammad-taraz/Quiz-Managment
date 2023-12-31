@@ -1,12 +1,24 @@
 import Header from "../Header";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion"
 
 function HomePage() {
+  
+  
+  const borderVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.92 } },
+  };
+
+  
   return (
     <>
       <Header />
       
-      <div className="flex justify-center items-center">
+      <motion.div className="flex justify-center items-center"
+             initial = "hidden"
+             animate = "visible"
+             variants = {borderVariants}>
         <TypeAnimation
           className="flex justify-center items-center border-[5px]  rounded-lg border-gray-400 mt-16 w-[35rem] p-12"
           sequence={[
@@ -19,7 +31,7 @@ function HomePage() {
           style={{ fontSize: "2em", display: "inline-block" }}
           repeat={Infinity}
         />
-      </div>
+      </motion.div>
     </>
   );
 }

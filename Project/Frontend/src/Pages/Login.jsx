@@ -22,7 +22,6 @@ const Login = () => {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.92 } },
   };
 
-
   const handleValue = (e) => {
     setData({ ...data, [e.target.name]: [e.target.value] });
   };

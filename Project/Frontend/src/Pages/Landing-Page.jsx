@@ -3,26 +3,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { Helmet } from "react-helmet"
+import { motion } from "framer-motion"
 
 function LandingPage() {
   const [count, setCount] = useState(0);
 
-  // const backgroundStyle = {
-  //   backgroundImage: 'url(https://getwallpapers.com/wallpaper/full/e/4/6/936332-beautiful-full-hd-1080p-desktop-backgrounds-1920x1080-photos.jpg)',
-  //   backgroundSize: 'cover',
-  //   backgroundPosition: 'center',
-  // };
+  const borderVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.92 } },
+  };
 
   return (
     <React.Fragment> 
-    {/* <Helmet className="bg-cover bg-no-repeat w-full">
-        <style>
-          {"body{background-image: url('https://getwallpapers.com/wallpaper/full/9/0/7/1276178-widescreen-5k-hd-wallpapers-1920x1080-image.jpg')}"}
-        </style>
-      </Helmet>  */}
+      <motion.div className="container5 bg-cover bg-no-repeat text-slate-100"
+             initial = "hidden"
+             animate = "visible"
+             variants = {borderVariants}>
 
-      
-      <div className="container5 bg-cover bg-no-repeat text-slate-100">
         <h1 className="wrapper flex font-bold text-center text-7xl italic underline">
           Welcome to Quiz Management
         </h1>
@@ -71,7 +68,7 @@ function LandingPage() {
         <div className="flex text-3xl font-semibold italic text-left justify-end">
           Developed by Muhammad Taraz
         </div>
-      </div>
+      </motion.div>
     </React.Fragment>
   );
 }
