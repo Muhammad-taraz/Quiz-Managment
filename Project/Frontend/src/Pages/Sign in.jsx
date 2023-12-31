@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import LandingPage from "./Landing-Page";
 import Quiz from "./Quiz";
 
-const Login = () => {
+const Signin = () => {
 
   const navigate = useNavigate();
 
@@ -27,9 +27,9 @@ const Login = () => {
   };
   return (
     <React.Fragment>
-      <div className="flex justify-center flex-col items-center mt-12 gap-5">
+      <div className="container2 flex justify-center flex-col items-center bg-opacity-75 mt-12 gap-5">
         <h1 className="flex font-bold justify-center mt-5 text-5xl italic underline">
-          SignUp
+          Sign in
         </h1>
 
         <form
@@ -82,12 +82,12 @@ const Login = () => {
           />
 
           <button
-            className="flex font-semibold justify-center text-lg italic mt-12 h-11 w-28 
-             p-2 bg-green-400 rounded-md hover:bg-green-900 border-black"
+            className="font-semibold text-lg italic mt-12 h-[3rem] w-[12rem]
+             p-2 bg-green-400 rounded-md hover:bg-green-900"
             type="submit"
             to={"/LandingPage"}
           >
-            SignUp{" "}
+            Create new account{" "}
           </button>
 
           <div className="flex justify-between mt-12 w-[100%]">
@@ -115,4 +115,4 @@ const Login = () => {
     </React.Fragment>
   );
 };
-export default Login;
+export default Signin;

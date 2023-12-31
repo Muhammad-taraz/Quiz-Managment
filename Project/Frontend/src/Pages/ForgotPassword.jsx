@@ -16,7 +16,7 @@ const ForgotPassword = () => {
   };
   return (
     <React.Fragment>
-      <div className="flex justify-center flex-col items-center mt-12 gap-5">
+      <div className="container3 flex justify-center flex-col bg-opacity-75 items-center mt-12 gap-5">
         <h1 className="flex font-bold justify-center mt-5 text-5xl italic underline">
           Reset password
         </h1>
@@ -50,9 +50,9 @@ const ForgotPassword = () => {
           <div className="flex justify-between mt-12 w-[100%]">
             <Link
               className="flex font-semibold mt-3 italic cursor-pointer p-3 text-lg"
-              to={"/Signup"}
+              to={"/Signin"}
             >
-              Sign Up
+              Sign in
             </Link>
 
             <div className="flex">
