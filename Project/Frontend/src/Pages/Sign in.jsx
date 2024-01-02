@@ -97,7 +97,7 @@ const Signin = () => {
 
             <button
               className="font-semibold text-lg italic mt-12 h-[3rem] w-[12rem]
-             p-2 bg-green-400 rounded-md hover:bg-green-900"
+             p-2  bg-green-400 rounded-md hover:bg-green-800 shadow-xl shadow-green-300"
               type="submit"
               to={"/LandingPage"}
             >

@@ -13,9 +13,8 @@ export default function Result() {
   };
 
   return (
-    <>
       <div className="container6 h-[100%] w-[100%] text-slate-50">
-        <h1 className="flex font-bold justify-center mt-5 text-5xl italic underline">
+        <h1 className="flex font-bold justify-center p-7 text-5xl italic underline">
           Result
         </h1>
 
@@ -61,7 +60,7 @@ export default function Result() {
         <div className="flex justify-center">
           <Link
             className="flex font-semibold justify-center text-lg italic mt-11 h-11 w-[8rem] p-2
-         bg-green-400 rounded-md hover:bg-green-900 border-black"
+            bg-green-400 rounded-md hover:bg-green-800 shadow-xl shadow-green-300 border-black"
             to={"/LandingPage"}
             onClick={onRestart}
           >
@@ -69,6 +68,6 @@ export default function Result() {
           </Link>
         </div>
       </div>
-    </>
+
   );
 }

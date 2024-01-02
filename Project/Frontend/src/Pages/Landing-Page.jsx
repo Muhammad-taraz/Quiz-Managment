@@ -58,7 +58,7 @@ function LandingPage() {
 
         <div className="btn items-center">
           <Link
-            className="flex font-semibold text-lg italic mt-12 h-11 w-28 items-center p-2 bg-green-400 rounded-md hover:bg-green-900 border-black"
+            className="flex font-semibold text-lg italic mt-12 h-11 w-28 items-center p-2  bg-green-400 rounded-md hover:bg-green-800 shadow-xl shadow-green-300 border-black"
             to={"/Quiz"}
           >
             Get Started

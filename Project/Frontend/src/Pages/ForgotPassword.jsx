@@ -51,7 +51,7 @@ const ForgotPassword = () => {
 
             <button
               className="flex font-semibold justify-center text-lg italic mt-12 h-11 w-[10rem] p-2
-              bg-green-400 rounded-md hover:bg-green-900 border-black"
+              bg-green-400 rounded-md hover:bg-green-800 shadow-xl shadow-green-300 border-black"
               type="submit"
               to={"/LandingPage"}
             >

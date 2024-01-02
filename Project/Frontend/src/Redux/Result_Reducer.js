@@ -1,3 +1,3 @@
-export const resultReducer = () => {
+// export const resultReducer = () => {
     
-}
+// }
