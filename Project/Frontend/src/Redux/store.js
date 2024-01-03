@@ -1,10 +1,11 @@
 // store.js
-import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "./combineReducer"; // Import your root reducer file
+import { createStore, combineReducers } from 'redux';
+import quizReducer from './quizReducer';
 
-const store = configureStore({
-  reducer: rootReducer,
-  // Add middleware or enhancers if needed
+const rootReducer = combineReducers({
+  quiz: quizReducer,
 });
+
+const store = createStore(rootReducer);
 
 export default store;

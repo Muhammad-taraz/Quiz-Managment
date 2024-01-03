@@ -1,9 +1,9 @@
-  // Result.jsx
+// Result.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { motion } from "framer-motion";
-import { resetQuizState } from "../Redux/quizSlice";
+import { resetQuizState } from '../Redux/quizAction';
 
 export default function Result() {
 
@@ -21,10 +21,14 @@ export default function Result() {
     totalEarnPoints,
     totalAttempts,
     passingMarks,
-    resultPercentage,
+    answers, // Retrieve answers from the state
   } = useSelector((state) => state.quiz);
 
-  const quizResult = resultPercentage >= passingMarks ? "Passed" : "Failed";
+  // Calculate earnPoints based on correct answers
+  const earnPoints = answers.filter((answer) => answer).length * 10;
+
+  // Calculate quizResult based on passingMarks
+  const quizResult = earnPoints >= passingMarks ? "Passed" : "Failed";
 
   const borderVariants = {
     hidden: { opacity: 0, scale: 0 },
@@ -37,7 +41,7 @@ export default function Result() {
   };
 
   return (
-    <div className="container6 h-[100%] w-[100%] text-slate-50">
+    <div className="container6 h-[100%] w-[100%] text-white opacity-90">
       <h1 className="flex font-bold justify-center p-7 text-5xl italic underline">
         Result
       </h1>
@@ -56,12 +60,12 @@ export default function Result() {
 
           <div className="flex justify-evenly">
             <span>Total Quiz Points</span>
-            <span>{totalEarnPoints}</span>
+            <span>200</span>
           </div>
 
           <div className="flex justify-evenly">
             <span>Total question</span>
-            <span>{totalAttempts}</span>
+            <span>20</span>
           </div>
 
           <div className="flex justify-evenly">
@@ -71,7 +75,7 @@ export default function Result() {
 
           <div className="flex justify-evenly">
             <span>Total Earn Points</span>
-            <span>{totalEarnPoints}</span>
+            <span>{earnPoints}</span>
           </div>
 
           <div className="flex justify-evenly">

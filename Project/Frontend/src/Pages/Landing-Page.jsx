@@ -14,11 +14,11 @@ function LandingPage() {
   };
 
   return (
-    <React.Fragment> 
+    <React.Fragment>
       <motion.div className="container5 bg-cover bg-no-repeat text-slate-100"
-             initial = "hidden"
-             animate = "visible"
-             variants = {borderVariants}>
+        initial="hidden"
+        animate="visible"
+        variants={borderVariants}>
 
         <h1 className="wrapper flex font-bold text-center text-7xl italic underline">
           Welcome to Quiz Management
@@ -31,27 +31,27 @@ function LandingPage() {
 
           <div className="flex mt-5 text-3xl italic pl-48">
             <ol>
-              <li className="pb-3">1. Here you have 5 subjects in the list.</li>
+              {/* <li className="pb-3">1. Here you have 5 subjects in the list.</li> */}
               <li className="pb-3">
-                2. Each subject has 50 multiple choices one after another.
+                1. Here you have random 20 multiple choices one after another.
               </li>
               <li className="pb-3">
-                3. Each question has four options. You can choose only one
+                2. Each question has three options. You can choose only one
                 option.
               </li>
               <li className="pb-3">
-                4. Five points are awarded for the correct answer.
+                3. Ten points are awarded for the correct answer.
               </li>
               <li className="pb-3">
-                5. You can review and change answers before the quiz is
+                4. You can review and change answers before the quiz is
                 finished.
               </li>
               <li className="pb-3">
-                6. The result will be declared at the end of the quiz.
+                5. The result will be declared at the end of the quiz.
               </li>
-              <li className="pb-3">
+              {/* <li className="pb-3">
                 7. You can also check your rank on the Leaderboard.
-              </li>
+              </li> */}
             </ol>
           </div>
         </div>

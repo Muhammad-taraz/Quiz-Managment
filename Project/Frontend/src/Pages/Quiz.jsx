@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import "../App.css";
 
-import Questions from './Questions'
+
+import QuestionPage from './QuestionPage';
 
 
 
@@ -9,11 +10,10 @@ export default function Quiz() {
 
   return (
     <>
-    
-       <Questions /> 
-      
+
+      <QuestionPage />
+
     </>
   )
 }
- 
- 
+
