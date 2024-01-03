@@ -1,33 +1,60 @@
-import React, { useEffect, useState } from "react";
+// Questions.jsx
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import data from "./data";
 import { useNavigate } from "react-router-dom";
+import {
+  setCurrentIndex,
+  setSelectedAnswer,
+  incrementTotalAttempts,
+  onSelect,
+  updateTotalEarnPoints,
+} from "../Redux/quizSlice";
 
 export default function Questions() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const onSelect = (option) => {
-    console.log("Selected option:", option);
-    setSelectedAnswer(option);
+  const {
+    currentIndex,
+    selectedAnswer,
+    totalAttempts,
+    totalEarnPoints,
+  } = useSelector((state) => state.quiz);
+
+  const handleSelect = (optionIndex) => {
+    dispatch(setSelectedAnswer(optionIndex));
   };
 
   const onPrev = () => {
     if (currentIndex >= 1) {
-      setCurrentIndex((prev) => prev - 1);
-      setSelectedAnswer(null); // Reset selected answer when moving to the previous question
+      dispatch(setCurrentIndex(currentIndex - 1));
+      dispatch(setSelectedAnswer(null));
     } else {
       alert("Wrong Click");
     }
   };
 
   const onNext = () => {
+    dispatch(incrementTotalAttempts());
+
     if (currentIndex >= data.length - 1) {
-      navigate("/result");
+      calculateQuizResult();
+      navigate("/Result");
       return;
     }
-    setCurrentIndex((prev) => prev + 1);
-    setSelectedAnswer(null); // Reset selected answer when moving to the next question
+
+    dispatch(setCurrentIndex(currentIndex + 1));
+    dispatch(setSelectedAnswer(null));
+  };
+
+  const calculateQuizResult = () => {
+    // Implement your logic to calculate result here
+    const passingMarks = 70;
+    const resultPercentage = (totalEarnPoints / data.length) * 100;
+    const quizResult = resultPercentage >= passingMarks ? 'Passed' : 'Failed';
+
+    dispatch(setQuizResult(quizResult));
   };
 
   return (
@@ -49,8 +76,8 @@ export default function Questions() {
                   type="radio"
                   name="options"
                   id={`q${i}-options`}
-                  onChange={() => onSelect(q)}
-                  checked={selectedAnswer === q}
+                  onChange={() => handleSelect(i)}
+                  checked={selectedAnswer === i}
                 />
                 <label
                   htmlFor={`q${i}-options`}
@@ -64,14 +91,14 @@ export default function Questions() {
 
           <div className="flex gap-[12rem] mt-12">
             <button
-              className="prev mt-2 p-2 rounded-lg text-black  bg-green-400 hover:bg-green-800 shadow-xl shadow-green-300"
+              className="prev mt-2 p-2 rounded-lg text-black bg-green-400 hover:bg-green-800 shadow-xl shadow-green-300"
               onClick={onPrev}
             >
               Previous
             </button>
 
             <button
-              className="next mt-2 p-2 rounded-lg text-black  bg-green-400 hover:bg-green-800 shadow-xl shadow-green-300"
+              className="next mt-2 p-2 rounded-lg text-black bg-green-400 hover:bg-green-800 shadow-xl shadow-green-300"
               onClick={onNext}
             >
               Next
