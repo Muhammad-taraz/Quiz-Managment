@@ -60,12 +60,12 @@ export default function Result() {
 
           <div className="flex justify-evenly">
             <span>Total Quiz Points</span>
-            <span>200</span>
+            <span>50</span>
           </div>
 
           <div className="flex justify-evenly">
             <span>Total question</span>
-            <span>20</span>
+            <span>5</span>
           </div>
 
           <div className="flex justify-evenly">

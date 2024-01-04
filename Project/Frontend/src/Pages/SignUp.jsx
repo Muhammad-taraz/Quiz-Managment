@@ -34,13 +34,13 @@ const Signin = () => {
     <React.Fragment>
       <div className="container2 flex justify-center items-center">
         <motion.div
-          className="flex flex-col my-11 bg-slate-300 p-12 w-[33rem] h-[40rem] bg-opacity-75 rounded-lg"
+          className="flex flex-col my-11 bg-slate-300 p-12 w-[30rem] h-[37rem] bg-opacity-25 opacity-100 rounded-lg"
           initial="hidden"
           animate="visible"
           variants={borderVariants}
         >
-          <h1 className="flex font-bold justify-center mt-5 text-5xl italic underline">
-            Sign in
+          <h1 className="flex font-bold justify-center text-5xl italic underline">
+            SignUp
           </h1>
 
           <form onSubmit={submitHandler}>
@@ -104,26 +104,26 @@ const Signin = () => {
               Create new account{" "}
             </button>
 
-            <div className="flex justify-between mt-7 w-[100%]">
+            {/*       
               <Link
                 className="flex font-semibold mt-3 italic cursor-pointer p-2 text-lg"
                 to={"/forgotPassword"}
               >
                 Forgot password
-              </Link>
+              </Link> */}
 
-              <div className="flex">
-                <span className="mt-6 italic text-lg">
+              <div className="flex ">
+                <span className="mt-6 italic text-xl">
                   Already have an account
                 </span>
                 <Link
-                  className="flex font-semibold mt-3 italic cursor-pointer p-3 text-lg"
+                  className="mt-3 flex font-semibold italic cursor-pointer p-3 text-xl"
                   to={"/Login"}
                 >
                   Login
                 </Link>
               </div>
-            </div>
+            
           </form>
         </motion.div>
       </div>

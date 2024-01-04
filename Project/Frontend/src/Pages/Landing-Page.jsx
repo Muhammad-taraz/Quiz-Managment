@@ -15,7 +15,7 @@ function LandingPage() {
 
   return (
     <React.Fragment>
-      <motion.div className="container5 bg-cover bg-no-repeat text-slate-100"
+      <motion.div className="container5 bg-cover bg-no-repeat text-white p-7"
         initial="hidden"
         animate="visible"
         variants={borderVariants}>

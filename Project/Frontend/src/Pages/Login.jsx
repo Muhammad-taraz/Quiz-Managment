@@ -36,7 +36,7 @@ const Login = () => {
       
       <div className="container1 flex justify-center items-center">
 
-      <motion.div className="flex flex-col my-11 bg-slate-300 p-12 w-[30rem] h-[34rem] bg-opacity-75 rounded-lg"
+      <motion.div className="flex flex-col my-11 bg-slate-100 p-11 w-[30rem] h-[32rem] bg-opacity-25 opacity-100 rounded-lg"
        initial = "hidden"
        animate = "visible"
        variants = {borderVariants}>
@@ -77,28 +77,33 @@ const Login = () => {
           />
 
           <button
-            className="flex font-semibold justify-center text-lg italic mt-12 h-11 w-28 
+            className="flex font-semibold justify-center text-xl italic mt-12 h-11 w-28 
              p-2 bg-green-400 rounded-md hover:bg-green-800 shadow-xl shadow-green-300 border-black"
-            type="submit"
+             type="submit"
             to={"/LandingPage"}
           >
             Login{" "}
           </button>
-          <div className="flex justify-between mt-7 w-[100%]">
-            <Link
-              className="flex font-semibold mt-3 italic cursor-pointer p-3 text-lg"
-              to={"/forgotPassword"}
-            >
-              Forgot password
-            </Link>
-            <Link
-              className="flex font-semibold mt-3 italic cursor-pointer p-3 text-lg"
-              to={"/Signin"}
-            >
-              Sign in
-            </Link>
-          </div>
-        </form>
+          {/*       
+              <Link
+                className="flex font-semibold mt-3 italic cursor-pointer p-2 text-lg"
+                to={"/forgotPassword"}
+              >
+                Forgot password
+              </Link> */}
+
+              <div className="flex">
+                <span className="mt-8 italic text-xl">
+                  Don't have an account
+                </span>
+                <Link
+                  className="mt-5 flex font-semibold italic cursor-pointer p-3 text-xl"
+                  to={"/SignUp"}
+                >
+                  SignUp
+                </Link>
+              </div>
+               </form>
       </motion.div>
 
       </div>
