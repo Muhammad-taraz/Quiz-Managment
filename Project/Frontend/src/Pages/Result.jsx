@@ -41,46 +41,46 @@ export default function Result() {
   };
 
   return (
-    <div className="container6 h-[100%] w-[100%] text-white opacity-90">
-      <h1 className="flex font-bold justify-center p-7 text-5xl italic underline">
+    <div className="container6 flex flex-col items-center justify-center h-[100%] w-[100%] text-black">
+      <h1 className="flex font-bold justify-center mt-[-12rem] pb-7 text-5xl italic underline">
         Result
       </h1>
 
       <motion.div
-        className="border-[2px] border-black mt-7 w-[54rem] ml-[15rem]"
+        className="border-[2px] border-black w-[40rem]"
         initial="hidden"
         animate="visible"
         variants={borderVariants}
       >
-        <div className="flex flex-col font-semibold gap-5 text-lg italic mt-12">
-          <div className="flex justify-evenly">
+        <div className="flex flex-col font-bold gap-7 text-2xl italic mt-12">
+          <div className="flex justify-around">
             <span>Username</span>
             <span>Daily Tution</span>
           </div>
 
-          <div className="flex justify-evenly">
+          <div className="flex justify-around">
             <span>Total Quiz Points</span>
             <span>50</span>
           </div>
 
-          <div className="flex justify-evenly">
+          <div className="flex justify-around">
             <span>Total question</span>
             <span>5</span>
           </div>
 
-          <div className="flex justify-evenly">
+          <div className="flex justify-around">
             <span>Total attempts</span>
             <span>{totalAttempts}</span>
           </div>
 
-          <div className="flex justify-evenly">
+          <div className="flex justify-around">
             <span>Total Earn Points</span>
             <span>{earnPoints}</span>
           </div>
 
-          <div className="flex justify-evenly">
+          <div className="flex justify-around">
             <span>Quiz Result</span>
-            <span>{quizResult}</span>
+            <span>Passed</span>
           </div>
           <br />
         </div>

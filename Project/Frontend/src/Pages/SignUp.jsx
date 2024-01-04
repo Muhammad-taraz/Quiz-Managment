@@ -4,6 +4,9 @@ import { Link, useNavigate } from "react-router-dom";
 import LandingPage from "./Landing-Page";
 import Quiz from "./Quiz";
 import { motion } from "framer-motion";
+import { MdEmail } from "react-icons/md";
+import { FaLock } from "react-icons/fa6";
+import { FaUserTie } from "react-icons/fa";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -34,7 +37,7 @@ const Signin = () => {
     <React.Fragment>
       <div className="container2 flex justify-center items-center">
         <motion.div
-          className="flex flex-col my-11 bg-slate-300 p-12 w-[30rem] h-[37rem] bg-opacity-25 opacity-100 rounded-lg"
+          className="flex flex-col my-11 bg-slate-300 p-12 w-[30rem] h-[38rem] bg-opacity-25 opacity-100 rounded-lg"
           initial="hidden"
           animate="visible"
           variants={borderVariants}
@@ -48,7 +51,15 @@ const Signin = () => {
               htmlFor="email"
               className="flex font-semibold italic text-lg"
             >
-              Email
+              <label
+                htmlFor="email"
+                className="flex font-semibold italic text-lg"
+              >
+                <p className="flex items-center gap-2">
+                  <MdEmail size={20} />
+                  Email{" "}
+                </p>
+              </label>
             </label>
 
             <input
@@ -65,7 +76,15 @@ const Signin = () => {
               htmlFor="Username"
               className="flex font-semibold italic text-lg"
             >
-              Username
+              <label
+                htmlFor="Username"
+                className="flex font-semibold italic text-lg"
+              >
+                <p className="flex items-center gap-2 mt-2">
+                  <FaUserTie />
+                  Username{" "}
+                </p>
+              </label>
             </label>
 
             <input
@@ -82,7 +101,15 @@ const Signin = () => {
               htmlFor="password"
               className="flex font-semibold italic text-lg mt-5 "
             >
-              Password
+              <label
+                htmlFor="password"
+                className="flex font-semibold italic text-lg mt-5 "
+              >
+                <p className="flex items-center gap-2">
+                  <FaLock />
+                  Password{" "}
+                </p>
+              </label>
             </label>
 
             <input
@@ -112,18 +139,17 @@ const Signin = () => {
                 Forgot password
               </Link> */}
 
-              <div className="flex ">
-                <span className="mt-6 italic text-xl">
-                  Already have an account
-                </span>
-                <Link
-                  className="mt-3 flex font-semibold italic cursor-pointer p-3 text-xl"
-                  to={"/Login"}
-                >
-                  Login
-                </Link>
-              </div>
-            
+            <div className="flex ">
+              <span className="mt-6 italic text-xl">
+                Already have an account
+              </span>
+              <Link
+                className="mt-3 flex font-semibold italic cursor-pointer p-3 text-xl"
+                to={"/Login"}
+              >
+                Login
+              </Link>
+            </div>
           </form>
         </motion.div>
       </div>

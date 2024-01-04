@@ -15,21 +15,21 @@ function LandingPage() {
 
   return (
     <React.Fragment>
-      <motion.div className="container5 bg-cover bg-no-repeat text-white p-7"
+      <motion.div className="container5 bg-cover bg-no-repeat text-black p-7 "
         initial="hidden"
         animate="visible"
         variants={borderVariants}>
 
-        <h1 className="wrapper flex font-bold text-center text-7xl italic underline">
+        <h1 className="wrapper flex font-bold mt-12 text-center text-6xl italic underline">
           Welcome to Quiz Management
         </h1>
 
         <div>
-          <h2 className="flex font-semibold text-5xl italic mt-11">
+          <h2 className="flex font-semibold text-5xl italic mt-20 text-black">
             Instructions:
           </h2>
 
-          <div className="flex mt-5 text-3xl italic pl-48">
+          <div className="flex mt-7 font-semibold text-3xl text-black italic pl-48">
             <ol>
               {/* <li className="pb-3">1. Here you have 5 subjects in the list.</li> */}
               <li className="pb-3">
