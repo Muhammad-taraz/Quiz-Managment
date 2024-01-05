@@ -41,18 +41,18 @@ export default function Result() {
   };
 
   return (
-    <div className="container6 flex flex-col items-center justify-center h-[100%] w-[100%] text-black">
-      <h1 className="flex font-bold justify-center mt-[-12rem] pb-7 text-5xl italic underline">
+    <div className="container6 flex flex-col items-center justify-center h-[100%] w-[100%] text-white">
+      <h1 className="flex font-bold text-white justify-center mt-[-8rem] pb-7 text-5xl italic underline">
         Result
       </h1>
 
       <motion.div
-        className="border-[2px] border-black w-[40rem]"
+        className="bg-black bg-opacity-5 border-[2px] border-black w-[54rem]"
         initial="hidden"
         animate="visible"
         variants={borderVariants}
       >
-        <div className="flex flex-col font-bold gap-7 text-2xl italic mt-12">
+        <div className="flex flex-col font-bold gap-7 text-3xl italic mt-12">
           <div className="flex justify-around">
             <span>Username</span>
             <span>Daily Tution</span>
@@ -80,7 +80,7 @@ export default function Result() {
 
           <div className="flex justify-around">
             <span>Quiz Result</span>
-            <span>Passed</span>
+            <span>{quizResult}</span>
           </div>
           <br />
         </div>

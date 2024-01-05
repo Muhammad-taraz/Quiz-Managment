@@ -254,19 +254,19 @@ const QuestionPage = () => {
     return (
         <>
             <div className="container4 text-white opacity-90">
-                <h4 className="flex font-bold justify-center p-7 text-5xl italic underline">
+                <h4 className="flex font-bold justify-center p-16 text-5xl italic underline">
                     Simple Questions
                 </h4>
 
                 <div className="flex flex-col ml-24 mt-[3rem]">
-                    <h5 className="flex font-semibold mt-5 text-2xl italic">
+                    <h5 className="flex font-semibold mt-5 text-4xl italic">
                         {qustionsArray[currentIndex]?.question}
                     </h5>
 
                     <ul>
                         {
                             qustionsArray[currentIndex].options.map(option => {
-                                return <li className="mt-2 flex" key={option}>
+                                return <li className="mt-5 flex" key={option}>
                                     <input
                                         id={option}
                                         type="radio"
@@ -276,7 +276,7 @@ const QuestionPage = () => {
                                     />
                                     <label
                                         htmlFor={option}
-                                        className="flex font-semibold italic text-lg ml-2"
+                                        className="flex font-semibold italic text-3xl ml-2"
                                     >
                                         {option}
                                     </label>

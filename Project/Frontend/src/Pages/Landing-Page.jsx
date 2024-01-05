@@ -20,16 +20,16 @@ function LandingPage() {
         animate="visible"
         variants={borderVariants}>
 
-        <h1 className="wrapper flex font-bold mt-12 text-center text-6xl italic underline">
+        <h1 className="wrapper flex font-bold mt-12 text-center text-7xl italic underline">
           Welcome to Quiz Management
         </h1>
 
         <div>
-          <h2 className="flex font-semibold text-5xl italic mt-20 text-black">
+          <h2 className="flex font-semibold text-6xl italic mt-20">
             Instructions:
           </h2>
 
-          <div className="flex mt-7 font-semibold text-3xl text-black italic pl-48">
+          <div className="flex mt-7 font-semibold text-5xl italic pl-48">
             <ol>
               {/* <li className="pb-3">1. Here you have 5 subjects in the list.</li> */}
               <li className="pb-3">
