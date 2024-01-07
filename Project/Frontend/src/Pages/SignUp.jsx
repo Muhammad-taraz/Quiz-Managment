@@ -37,23 +37,23 @@ const Signin = () => {
     <React.Fragment>
       <div className="container2 flex justify-center items-center">
         <motion.div
-          className="flex flex-col my-11 bg-slate-300 p-12 w-[30rem] h-[38rem] bg-opacity-25 opacity-100 rounded-lg"
+          className="flex flex-col my-11 bg-slate-300 p-12 lg:w-[30rem] md:[20rem] sm:[12rem] lg:h-[38rem] md:h-[30rem] sm:h-[20rem] bg-opacity-25 opacity-100 rounded-lg"
           initial="hidden"
           animate="visible"
           variants={borderVariants}
         >
-          <h1 className="flex font-bold justify-center text-5xl italic underline">
+          <h1 className="flex font-bold justify-center lg:text-5xl md:text-3xl sm:text-xl italic underline">
             SignUp
           </h1>
 
           <form onSubmit={submitHandler}>
             <label
               htmlFor="email"
-              className="flex font-semibold italic text-lg"
+              className="flex font-semibold italic lg:text-lg md:text-sm sm:text-xs"
             >
               <label
                 htmlFor="email"
-                className="flex font-semibold italic text-lg"
+                className="flex font-semibold italic lg:text-lg md:text-sm sm:text-xs"
               >
                 <p className="flex items-center gap-2">
                   <MdEmail size={20} />
@@ -67,7 +67,7 @@ const Signin = () => {
               type="email"
               placeholder="email"
               name="email"
-              className="flex w-[24rem] mt-5 italic p-2 my-1 border-[4px] rounded-lg"
+              className="flex lg:w-[24rem] md:w-[18rem] sm:w-[10rem] lg:mt-5 md:mt-2 sm:mt-0 italic p-2 my-1 border-[4px] rounded-lg"
               value={data.email}
               onChange={handleValue}
             />
@@ -78,7 +78,7 @@ const Signin = () => {
             >
               <label
                 htmlFor="Username"
-                className="flex font-semibold italic text-lg"
+                className="flex font-semibold italic lg:text-lg md:text-sm sm:text-xs"
               >
                 <p className="flex items-center gap-2 mt-2">
                   <FaUserTie />
@@ -92,18 +92,18 @@ const Signin = () => {
               type="text"
               placeholder="Username"
               name="username"
-              className="flex w-[24rem] mt-5 italic p-2 my-1 border-[4px] rounded-lg"
+              className="flex lg:w-[24rem] md:w-[18rem] sm:w-[10rem] lg:mt-5 md:mt-2 italic p-2 my-1 border-[4px] rounded-lg"
               value={data.username}
               onChange={handleValue}
             />
 
             <label
               htmlFor="password"
-              className="flex font-semibold italic text-lg mt-5 "
+              className="flex font-semibold italic lg:text-lg md:text-sm sm:text-xs lg:mt-5 md:mt-2 sm:mt-0" 
             >
               <label
                 htmlFor="password"
-                className="flex font-semibold italic text-lg mt-5 "
+                className="flex font-semibold italic lg:text-lg md:text-sm sm:text-xs lg:mt-5 md:mt-2 sm:mt-0"
               >
                 <p className="flex items-center gap-2">
                   <FaLock />
@@ -117,13 +117,13 @@ const Signin = () => {
               type="password"
               placeholder="password"
               name="password"
-              className="flex w-[24rem] mt-5 italic p-2 my-1 border-[4px] rounded-lg"
+              className="flex lg:w-[24rem] md:w-[18rem] sm:w-[10rem] lg:mt-5 md:mt-2 sm:mt-0 italic p-2 my-1 border-[4px] rounded-lg"
               value={data.password}
               onChange={handleValue}
             />
 
             <button
-              className="font-semibold text-lg italic mt-12 h-[3rem] w-[12rem]
+              className="font-semibold lg:text-lg md:text-xs sm:text-xs italic lg:mt-12 md:mt-5 sm:mt-4 lg:h-[3rem] md:h-[2rem] sm:h-[1rem] lg:w-[12rem] md:w-[8rem] sm:w-[6rem]
              p-2  bg-green-400 rounded-md hover:bg-green-800 shadow-xl shadow-green-300"
               type="submit"
               to={"/LandingPage"}
@@ -140,7 +140,7 @@ const Signin = () => {
               </Link> */}
 
             <div className="flex ">
-              <span className="mt-6 italic text-xl">
+              <span className="mt-6 italic lg:text-xl md:text-xsm">
                 Already have an account
               </span>
               <Link
