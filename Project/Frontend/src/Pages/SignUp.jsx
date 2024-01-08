@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import Header from "../Header";
 import { Link, useNavigate } from "react-router-dom";
-import LandingPage from "./Landing-Page";
-import Quiz from "./Quiz";
 import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa6";
 import { FaUserTie } from "react-icons/fa";
-
+import axios from 'axios';
 const Signin = () => {
   const navigate = useNavigate();
 
@@ -29,8 +26,15 @@ const Signin = () => {
     setData({ ...data, [e.target.name]: [e.target.value] });
   };
 
-  const submitHandler = (e) => {
+  const submitHandler = async(e) => {
     e.preventDefault();
+    const response=await axios.post("http://localhost:5924/api/signUp",{
+      username: data.username,
+      email: data.email,
+      password: data.password
+    });
+    console.log(response)
+
     navigate("/LandingPage");
   };
   return (

@@ -138,6 +138,7 @@ app.use('/api', router);
 router.all("/", (req,res) => {
         res.json({message : " Succesfully we are live 🥳🥳🚀🚀🎥"})
     })
+    
     app.listen(PORT,()=> {
         console.log("server started");
     })

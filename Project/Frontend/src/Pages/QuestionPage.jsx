@@ -9,7 +9,7 @@ import { updateQuizResult } from '../Redux/quizAction';
 const QuestionPage = () => {
     const dispatch = useDispatch();
     const [quizResult, setQuizResult] = useState({
-        totalAttempts: 0,
+        totalAttempts: 1,
         earnPoints: 0,
         resultStatus: false,
         answers: [], // Store correctness of each answer
@@ -215,7 +215,7 @@ const QuestionPage = () => {
     };
 
     const onNext = () => {
-        if (currentIndex < qustionsArray.length - 1) {
+        if (currentIndex < qustionsArray.length-1) {
             if (currentAnswer === "") {
                 console.log("Please give an answer");
             } else {
@@ -235,6 +235,24 @@ const QuestionPage = () => {
             handleResultNavigation();
         }
     };
+
+    const onNextQuestion=()=>{
+        if(currentIndex>qustionsArray.length-2){
+            handleResultNavigation();
+        }else{
+            const updatedQuizResult = {
+                totalAttempts: quizResult.totalAttempts + 1,
+                resultStatus: true,
+                earnPoints: isCorrect ? quizResult.earnPoints + 10 : quizResult.earnPoints,
+                answers: [...quizResult.answers, isCorrect],
+            };
+            setQuizResult(updatedQuizResult);
+            dispatch(updateQuizResult(updatedQuizResult));
+            setCurrentIndex((prev) => prev + 1);
+            setCurrentAnswer("");
+            setIsCorrect(false);
+        }
+    }
 
     const handleCheckAnswer = (answer, correctAns) => {
         if (answer === correctAns) {
@@ -296,7 +314,7 @@ const QuestionPage = () => {
 
                         <button
                             className="next mt-2 p-2 rounded-lg text-black bg-green-400 hover:bg-green-800 shadow-xl shadow-green-300"
-                            onClick={onNext}
+                            onClick={onNextQuestion}
                         >
                             Next
                         </button>

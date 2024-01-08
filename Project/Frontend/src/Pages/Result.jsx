@@ -28,7 +28,8 @@ export default function Result() {
   const earnPoints = answers.filter((answer) => answer).length * 10;
 
   // Calculate quizResult based on passingMarks
-  const quizResult = earnPoints >= passingMarks ? "Passed" : "Failed";
+  // const quizResult = earnPoints >= passingMarks ? "Passed" : "Failed";
+  const quizResult = earnPoints >= 20 ? "Passed" : "Failed";
 
   const borderVariants = {
     hidden: { opacity: 0, scale: 0 },
