@@ -32,12 +32,12 @@ const Login = () => {
         email: data.email,
         password: data.password
       });
-      console.log(response)
+      //console.log(response)
   
       navigate("/LandingPage");
       
     } catch (error) {
-      console.log(error)
+      alert("Account not found");
     }
   };
   return (
