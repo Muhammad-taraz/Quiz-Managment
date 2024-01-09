@@ -22,18 +22,17 @@ const Login = () => {
   };
 
   const handleValue = (e) => {
-    setData({ ...data, [e.target.name]: [e.target.value] });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const submitHandler = async(e) => {
     e.preventDefault();
+
     try {
       const response=await axios.post("http://localhost:5924/api/login",{
         email: data.email,
         password: data.password
-      });
-      //console.log(response)
-  
+      }); 
       navigate("/LandingPage");
       
     } catch (error) {

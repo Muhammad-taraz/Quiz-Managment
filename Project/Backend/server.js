@@ -36,10 +36,12 @@ const router = express.Router();
 router.post('/signup', async (req, res) => {
   try {
     const { username, email, password } = req.body;
-    
+    //console.log(username, email, password)
     // Hash the password before saving it
+    if(!password||username,!email) {
+     return res.status(500).send('Password required');
+    }
     const hashedPassword = await bcrypt.hash(password, saltRounds);
-
     const newUser = new User({
       username,
       email,
@@ -49,7 +51,7 @@ router.post('/signup', async (req, res) => {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser);
   } catch (error) {
-    console.error(error);
+    console.log(error);
     res.status(500).send('Error creating user');
   }
 });
@@ -62,13 +64,13 @@ router.post('/login', async (req, res) => {
     const user = await User.findOne({ email });
 
     if (!user) {
-      return res.status(401).send('Invalid credentials');
+      return res.status(401).send('Invalid credentials,enail not found');
     }
-
+    console.log(password,user)
     const isPasswordValid = await bcrypt.compare(password, user.password);
-
+    console.log(isPasswordValid)
     if (!isPasswordValid) {
-      return res.status(401).send('Invalid credentials');
+      return res.status(401).send('Invalid credentials wrong password');
     }
 
     res.status(200).json(user);

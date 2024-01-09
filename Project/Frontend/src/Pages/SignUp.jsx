@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MdEmail } from "react-icons/md";
 import { FaLock } from "react-icons/fa6";
 import { FaUserTie } from "react-icons/fa";
+import {Helmet} from "react-helmet";
 import axios from 'axios';
 const Signin = () => {
   const navigate = useNavigate();
@@ -23,22 +24,27 @@ const Signin = () => {
   };
 
   const handleValue = (e) => {
-    setData({ ...data, [e.target.name]: [e.target.value] });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const submitHandler = async(e) => {
     e.preventDefault();
+   
     const response=await axios.post("http://localhost:5924/api/signUp",{
       username: data.username,
       email: data.email,
       password: data.password
     });
-    console.log(response)
+   
 
     navigate("/LandingPage");
   };
   return (
     <React.Fragment>
+    <Helmet>
+                <meta charSet="utf-8" />
+                <title>Sign Up</title>
+            </Helmet>
       <div className="container2 flex justify-center items-center">
         <motion.div
           className="flex flex-col my-11 bg-slate-300 p-12 lg:w-[30rem] md:[20rem] sm:[12rem] lg:h-[38rem] md:h-[30rem] sm:h-[20rem] bg-opacity-25 opacity-100 rounded-lg"
@@ -58,7 +64,7 @@ const Signin = () => {
               <label
                 htmlFor="email"
                 className="flex font-semibold italic lg:text-lg md:text-sm sm:text-xs"
-              >
+              > 
                 <p className="flex items-center gap-2">
                   <MdEmail size={20} />
                   Email{" "}
