@@ -47,7 +47,7 @@ const Portfolio = () => {
 
       <div className="md:w-1/3 flex justify-center mt-4 md:mt-0">
         <img
-          src="https://example.com/your-image.jpg" // Replace with the actual URL of your image
+          src="https://w0.peakpx.com/wallpaper/451/359/HD-wallpaper-studying-with-coffee-study-working-hard-calculator-laptop-room-set-up.jpg" // Replace with the actual URL of your image
           alt="Working on laptop"
           className="rounded-md shadow-md"
         />
